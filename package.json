@@ -18,8 +18,10 @@
     "@types/node": "^12.6.8",
     "coc.nvim": "^0.0.73",
     "rimraf": "^2.6.3",
+    "sql-formatter": "^2.3.3",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
+    "vscode-languageserver-protocol": "^3.14.1",
     "webpack": "^4.37.0",
     "webpack-cli": "^3.3.6"
   }
