@@ -1,0 +1,26 @@
+{
+  "name": "coc-sql",
+  "version": "1.0.0",
+  "description": "SQL extension for coc.nvim",
+  "main": "lib/index.js",
+  "author": "Heyward Fann <fannheyward@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf lib",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "prepare": "npx npm-run-all clean build"
+  },
+  "engines": {
+    "coc": "^0.0.70"
+  },
+  "devDependencies": {
+    "@types/node": "^12.6.8",
+    "coc.nvim": "^0.0.73",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.37.0",
+    "webpack-cli": "^3.3.6"
+  }
+}
