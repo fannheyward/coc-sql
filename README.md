@@ -16,8 +16,17 @@ SQL extension for coc.nvim
 
 ## Usage
 
+### Format document
+
 - `:call CocAction('format')`
 - `:CocCommand sql.Format`
+
+### Format selected content
+
+```vim
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+```
 
 ## License
 

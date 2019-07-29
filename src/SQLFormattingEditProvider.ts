@@ -3,13 +3,9 @@ import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Ur
 import sqlFormatter from 'sql-formatter';
 import { CancellationToken, FormattingOptions, Range, TextDocument, TextEdit } from 'vscode-languageserver-protocol';
 
-export async function format(document: TextDocument, options: Partial<any>): Promise<string> {
-  let u = Uri.parse(document.uri);
-  const fileName = u.fsPath;
-  let text = options.text;
-  if (!text) {
-    text = document.getText();
-  }
+export async function format(document: TextDocument, range?: Range): Promise<string> {
+  const fileName = Uri.parse(document.uri).fsPath;
+  const text = document.getText(range);
   return safeExecution(
     () => {
       return sqlFormatter.format(text);
@@ -54,7 +50,7 @@ class SQLFormattingEditProvider implements DocumentFormattingEditProvider, Docum
   constructor() {}
 
   public provideDocumentFormattingEdits(document: TextDocument, _options: FormattingOptions, _token: CancellationToken): Promise<TextEdit[]> {
-    return this._provideEdits(document, {});
+    return this._provideEdits(document, undefined);
   }
 
   public provideDocumentRangeFormattingEdits(
@@ -63,15 +59,15 @@ class SQLFormattingEditProvider implements DocumentFormattingEditProvider, Docum
     _options: FormattingOptions,
     _token: CancellationToken
   ): Promise<TextEdit[]> {
-    return this._provideEdits(document, {
-      rangeStart: document.offsetAt(range.start),
-      rangeEnd: document.offsetAt(range.end)
-    });
+    return this._provideEdits(document, range);
   }
 
-  private async _provideEdits(document: TextDocument, options: Partial<any>): Promise<TextEdit[]> {
-    const code = await format(document, options);
-    const edits = [TextEdit.replace(fullDocumentRange(document), code)];
+  private async _provideEdits(document: TextDocument, range?: Range): Promise<TextEdit[]> {
+    const code = await format(document, range);
+    if (!range) {
+      range = fullDocumentRange(document);
+    }
+    const edits = [TextEdit.replace(range, code)];
     if (edits && edits.length) {
       workspace.showMessage(`Formatted by sql.Format`);
       return edits;

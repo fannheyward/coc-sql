@@ -56,7 +56,8 @@ export async function activate(context: ExtensionContext): Promise<void> {
     commands.registerCommand('sql.Format', async () => {
       let doc = await workspace.document;
 
-      let edits = await format(doc.textDocument, {}).then(code => [TextEdit.replace(fullDocumentRange(doc.textDocument), code)]);
+      const code = await format(doc.textDocument, undefined);
+      const edits = [TextEdit.replace(fullDocumentRange(doc.textDocument), code)];
       if (edits && edits.length) {
         await doc.applyEdits(workspace.nvim, edits);
       }
