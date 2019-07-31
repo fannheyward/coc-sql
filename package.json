@@ -31,5 +31,13 @@
     "vscode-languageserver-protocol": "^3.14.1",
     "webpack": "^4.37.0",
     "webpack-cli": "^3.3.6"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "sql.Format",
+        "title": "Format sql file by sql-formatter"
+      }
+    ]
   }
 }
