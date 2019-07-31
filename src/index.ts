@@ -40,9 +40,10 @@ function selectors(): Selectors {
 
 export async function activate(context: ExtensionContext): Promise<void> {
   const { subscriptions } = context;
+  const config = workspace.getConfiguration('sql');
   const editProvider = new SQLFormattingEditProvider();
   const engine = new SQLLintEngine();
-  let priority = 1;
+  const priority = 1;
 
   function registerFormatter(): void {
     disposeHandlers();
@@ -73,20 +74,26 @@ export async function activate(context: ExtensionContext): Promise<void> {
     subscriptions
   );
 
-  workspace.onDidChangeTextDocument(
-    async _e => {
-      const doc = await workspace.document;
-      await engine.lint(doc.textDocument);
-    },
-    null,
-    subscriptions
-  );
+  const onChange = config.get<boolean>('lintOnChange');
+  if (onChange) {
+    workspace.onDidChangeTextDocument(
+      async _e => {
+        const doc = await workspace.document;
+        await engine.lint(doc.textDocument);
+      },
+      null,
+      subscriptions
+    );
+  }
 
-  workspace.onDidSaveTextDocument(
-    async e => {
-      await engine.lint(e);
-    },
-    null,
-    subscriptions
-  );
+  const onSave = config.get<boolean>('lintOnSave');
+  if (onSave) {
+    workspace.onDidSaveTextDocument(
+      async e => {
+        await engine.lint(e);
+      },
+      null,
+      subscriptions
+    );
+  }
 }

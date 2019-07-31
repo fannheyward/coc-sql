@@ -35,6 +35,22 @@
     "webpack-cli": "^3.3.6"
   },
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "TexLab configuration",
+      "properties": {
+        "sql.lintOnChange": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint sql file on change"
+        },
+        "sql.lintOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint sql file on save"
+        }
+      }
+    },
     "commands": [
       {
         "command": "sql.Format",
