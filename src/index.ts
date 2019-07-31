@@ -1,6 +1,6 @@
 import { commands, ExtensionContext, languages, workspace } from 'coc.nvim';
-import { Parser } from 'node-sql-parser';
-import { DiagnosticSeverity, Disposable, DocumentSelector, Position, Range, TextEdit } from 'vscode-languageserver-protocol';
+import { Disposable, DocumentSelector, TextEdit } from 'vscode-languageserver-protocol';
+import { SQLLintEngine } from './SQLLintEngine';
 import SQLFormattingEditProvider, { format, fullDocumentRange } from './SQLFormattingEditProvider';
 
 interface Selectors {
@@ -29,10 +29,8 @@ function disposeHandlers(): void {
  * Build formatter selectors
  */
 function selectors(): Selectors {
-  // TODO
-  // * @sample `let sel:DocumentSelector = [{ language: 'typescript' }, { language: 'json', pattern: '**∕tsconfig.json' }]`;
-  let languageSelector = [{ language: 'sql' }];
-  let rangeLanguageSelector = [{ language: 'sql', scheme: 'file' }, { language: 'sql', scheme: 'untitled' }];
+  const languageSelector = [{ language: 'sql', scheme: 'file' }, { language: 'sql', scheme: 'untitled' }];
+  const rangeLanguageSelector = [{ language: 'sql', scheme: 'file' }, { language: 'sql', scheme: 'untitled' }];
 
   return {
     languageSelector,
@@ -43,6 +41,7 @@ function selectors(): Selectors {
 export async function activate(context: ExtensionContext): Promise<void> {
   const { subscriptions } = context;
   const editProvider = new SQLFormattingEditProvider();
+  const engine = new SQLLintEngine();
   let priority = 1;
 
   function registerFormatter(): void {
@@ -56,7 +55,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   subscriptions.push(
     commands.registerCommand('sql.Format', async () => {
-      let doc = await workspace.document;
+      const doc = await workspace.document;
 
       const code = await format(doc.textDocument, undefined);
       const edits = [TextEdit.replace(fullDocumentRange(doc.textDocument), code)];
@@ -68,34 +67,24 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
   workspace.onDidOpenTextDocument(
     async e => {
+      await engine.lint(e);
+    },
+    null,
+    subscriptions
+  );
+
+  workspace.onDidChangeTextDocument(
+    async _e => {
       const doc = await workspace.document;
-      if (workspace.match(['sql'], doc.textDocument) <= 0) {
-        return;
-      }
+      await engine.lint(doc.textDocument);
+    },
+    null,
+    subscriptions
+  );
 
-      try {
-        const parser = new Parser();
-        parser.parse(e.getText());
-      } catch (err) {
-        if (err.name !== 'SyntaxError') {
-          return;
-        }
-
-        const start = Position.create(err.location.start.line - 1, err.location.start.column);
-        const end = Position.create(err.location.end.line - 1, err.location.end.column);
-        const range = Range.create(start.line, start.character, end.line, end.character);
-
-        let collection = languages.createDiagnosticCollection('sql');
-        collection.set(e.uri, [
-          {
-            range: range,
-            message: err.message,
-            severity: DiagnosticSeverity.Error,
-            source: 'sql',
-            relatedInformation: []
-          }
-        ]);
-      }
+  workspace.onDidSaveTextDocument(
+    async e => {
+      await engine.lint(e);
     },
     null,
     subscriptions
