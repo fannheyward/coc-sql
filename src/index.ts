@@ -1,7 +1,7 @@
-import { commands, ExtensionContext, languages, workspace } from 'coc.nvim';
+import { commands, events, ExtensionContext, languages, workspace } from 'coc.nvim';
 import { Disposable, DocumentSelector, TextEdit } from 'vscode-languageserver-protocol';
-import { SQLLintEngine } from './SQLLintEngine';
 import SQLFormattingEditProvider, { format, fullDocumentRange } from './SQLFormattingEditProvider';
+import { SQLLintEngine } from './SQLLintEngine';
 
 interface Selectors {
   rangeLanguageSelector: DocumentSelector;
@@ -65,6 +65,18 @@ export async function activate(context: ExtensionContext): Promise<void> {
       }
     })
   );
+
+  workspace.documents.map(async doc => {
+    await engine.lint(doc.textDocument);
+  });
+
+  events.on('BufEnter', async bufnr => {
+    const doc = workspace.getDocument(bufnr);
+    if (!doc) {
+      return;
+    }
+    await engine.lint(doc.textDocument);
+  });
 
   workspace.onDidOpenTextDocument(
     async e => {
