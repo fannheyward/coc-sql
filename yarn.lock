@@ -2048,9 +2048,9 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-sql-parser@^1.3.2:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-1.3.3.tgz#accfb843b41ef5496ec788f97571f9974d3356f5"
-  integrity sha512-NyyYNT/jsCbcjK0sKaFJq+0sEQ0uj9nLk0+4F6fLM/zlAYcLT4XIZQLlF3jVAomJm8MF1UO+oKeNxIB1gN3isA==
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-1.3.4.tgz#3a6300ca2552a7ed3592a3457643823ac27876f0"
+  integrity sha512-S/KodZP1OxQi64wWGJDDawLWNB7oc4ifcP1O/CwKH4v0SSWkFK2vQAnkF2WFOXPVBrm8urwE+5vmr0jwq37D6g==
   dependencies:
     has "^1.0.3"
 
