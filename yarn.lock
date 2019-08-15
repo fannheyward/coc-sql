@@ -15,9 +15,9 @@
   integrity sha512-LIsSoakKFGjAlIj2w5McH5g/Qjext8/8GSbgS2XSZ5vUl9xYVvk+hNW/OgXfyC30VV+fiS9QIz6Z1h5exbOiRQ==
 
 "@types/node@^12.6.8":
-  version "12.7.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.1.tgz#3b5c3a26393c19b400844ac422bd0f631a94d69d"
-  integrity sha512-aK9jxMypeSrhiYofWWBf/T7O+KwaiAHzM4sveCdWPn71lzUSMimRnKzhXDKfKwV1kWoBo2P1aGgaIYGLf9/ljw==
+  version "12.7.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.2.tgz#c4e63af5e8823ce9cc3f0b34f7b998c2171f0c44"
+  integrity sha512-dyYO+f6ihZEtNPDcWNR1fkoTDf3zAK3lAABDze3mz6POyIercH0lEUawUFXlG8xaQZmm1yEBON/4TsYv/laDYg==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
