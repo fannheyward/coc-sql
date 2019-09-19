@@ -60,7 +60,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
 
       const code = await format(doc.textDocument, undefined);
       const edits = [TextEdit.replace(fullDocumentRange(doc.textDocument), code)];
-      if (edits && edits.length) {
+      if (edits) {
         await doc.applyEdits(workspace.nvim, edits);
       }
     })
