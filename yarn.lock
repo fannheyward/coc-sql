@@ -9,11 +9,6 @@
   dependencies:
     msgpack-lite "^0.1.26"
 
-"@types/node-sql-parser@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@types/node-sql-parser/-/node-sql-parser-1.0.0.tgz#5cd8fb377159924ddbd7d6340f0420239b31e1c4"
-  integrity sha512-LIsSoakKFGjAlIj2w5McH5g/Qjext8/8GSbgS2XSZ5vUl9xYVvk+hNW/OgXfyC30VV+fiS9QIz6Z1h5exbOiRQ==
-
 "@types/node@^12.6.8":
   version "12.7.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.7.tgz#f9bd8c00fa9e1a8129af910fc829f6139c397d6c"
