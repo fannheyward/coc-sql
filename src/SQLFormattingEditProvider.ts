@@ -67,12 +67,9 @@ class SQLFormattingEditProvider implements DocumentFormattingEditProvider, Docum
     if (!range) {
       range = fullDocumentRange(document);
     }
-    const edits = [TextEdit.replace(range, code)];
-    if (edits && edits.length) {
-      workspace.showMessage(`Formatted by sql.Format`);
-      return edits;
-    }
-    return Promise.resolve([]);
+
+    workspace.showMessage(`Formatted by sql.Format`);
+    return [TextEdit.replace(range, code)];
   }
 }
 
