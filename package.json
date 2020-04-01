@@ -39,6 +39,11 @@
       "type": "object",
       "title": "TexLab configuration",
       "properties": {
+        "sql.lintOnOpen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Lint sql file on opening"
+        },
         "sql.lintOnChange": {
           "type": "boolean",
           "default": true,

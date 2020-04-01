@@ -72,25 +72,28 @@ export async function activate(context: ExtensionContext): Promise<void> {
     })
   );
 
-  workspace.documents.map(async (doc) => {
-    await engine.lint(doc.textDocument);
-  });
+  const onOpen = config.get('lintOnOpen') as boolean;
+  if (onOpen) {
+    workspace.documents.map(async (doc) => {
+      await engine.lint(doc.textDocument);
+    });
 
-  events.on('BufEnter', async (bufnr) => {
-    const doc = workspace.getDocument(bufnr);
-    if (!doc) {
-      return;
-    }
-    await engine.lint(doc.textDocument);
-  });
+    events.on('BufEnter', async (bufnr) => {
+      const doc = workspace.getDocument(bufnr);
+      if (!doc) {
+        return;
+      }
+      await engine.lint(doc.textDocument);
+    });
 
-  workspace.onDidOpenTextDocument(
-    async (e) => {
-      await engine.lint(e);
-    },
-    null,
-    subscriptions
-  );
+    workspace.onDidOpenTextDocument(
+      async (e) => {
+        await engine.lint(e);
+      },
+      null,
+      subscriptions
+    );
+  }
 
   const onChange = config.get<boolean>('lintOnChange');
   if (onChange) {
