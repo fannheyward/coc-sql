@@ -29,12 +29,18 @@ function disposeHandlers(): void {
  * Build formatter selectors
  */
 function selectors(): Selectors {
-  const languageSelector = [{ language: 'sql', scheme: 'file' }, { language: 'sql', scheme: 'untitled' }];
-  const rangeLanguageSelector = [{ language: 'sql', scheme: 'file' }, { language: 'sql', scheme: 'untitled' }];
+  const languageSelector = [
+    { language: 'sql', scheme: 'file' },
+    { language: 'sql', scheme: 'untitled' },
+  ];
+  const rangeLanguageSelector = [
+    { language: 'sql', scheme: 'file' },
+    { language: 'sql', scheme: 'untitled' },
+  ];
 
   return {
     languageSelector,
-    rangeLanguageSelector
+    rangeLanguageSelector,
   };
 }
 
@@ -66,11 +72,11 @@ export async function activate(context: ExtensionContext): Promise<void> {
     })
   );
 
-  workspace.documents.map(async doc => {
+  workspace.documents.map(async (doc) => {
     await engine.lint(doc.textDocument);
   });
 
-  events.on('BufEnter', async bufnr => {
+  events.on('BufEnter', async (bufnr) => {
     const doc = workspace.getDocument(bufnr);
     if (!doc) {
       return;
@@ -79,7 +85,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   });
 
   workspace.onDidOpenTextDocument(
-    async e => {
+    async (e) => {
       await engine.lint(e);
     },
     null,
@@ -89,7 +95,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const onChange = config.get<boolean>('lintOnChange');
   if (onChange) {
     workspace.onDidChangeTextDocument(
-      async _e => {
+      async (_e) => {
         const doc = await workspace.document;
         await engine.lint(doc.textDocument);
       },
@@ -101,7 +107,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const onSave = config.get<boolean>('lintOnSave');
   if (onSave) {
     workspace.onDidSaveTextDocument(
-      async e => {
+      async (e) => {
         await engine.lint(e);
       },
       null,

@@ -1,5 +1,4 @@
 import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Uri, workspace } from 'coc.nvim';
-// @ts-ignore
 import sqlFormatter from 'sql-formatter';
 import { CancellationToken, FormattingOptions, Range, TextDocument, TextEdit } from 'vscode-languageserver-protocol';
 
@@ -18,7 +17,7 @@ export async function format(document: TextDocument, range?: Range): Promise<str
 function safeExecution(cb: (() => string) | Promise<string>, defaultText: string, fileName: string): string | Promise<string> {
   if (cb instanceof Promise) {
     return cb
-      .then(returnValue => {
+      .then((returnValue) => {
         return returnValue;
       })
       .catch((err: Error) => {

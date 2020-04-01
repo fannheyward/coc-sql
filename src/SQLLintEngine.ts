@@ -34,8 +34,8 @@ export class SQLLintEngine {
           message: err.message,
           severity: DiagnosticSeverity.Error,
           source: 'sql',
-          relatedInformation: []
-        }
+          relatedInformation: [],
+        },
       ]);
     }
   }
