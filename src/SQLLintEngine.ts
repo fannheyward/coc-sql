@@ -1,5 +1,5 @@
 import { DiagnosticCollection, languages, workspace } from 'coc.nvim';
-import { Parser } from 'node-sql-parser';
+import { Option, Parser } from 'node-sql-parser';
 import { DiagnosticSeverity, Position, Range, TextDocument } from 'vscode-languageserver-protocol';
 
 export class SQLLintEngine {
@@ -17,8 +17,10 @@ export class SQLLintEngine {
     this.collection.clear();
 
     try {
+      const database = workspace.getConfiguration('sql').get('database') as string;
+      const opt: Option = { database };
       const parser = new Parser();
-      parser.parse(e.getText());
+      parser.parse(e.getText(), opt);
     } catch (err) {
       if (err.name !== 'SyntaxError') {
         return;

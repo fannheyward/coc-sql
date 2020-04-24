@@ -39,6 +39,18 @@
       "type": "object",
       "title": "TexLab configuration",
       "properties": {
+        "sql.database": {
+          "type": "string",
+          "default": "mysql",
+          "enum": [
+            "hive",
+            "mysql",
+            "mariadb",
+            "postgresql",
+            "transactsql"
+          ],
+          "description": "Define the database to lint"
+        },
         "sql.lintOnOpen": {
           "type": "boolean",
           "default": true,
