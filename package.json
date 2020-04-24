@@ -1,6 +1,6 @@
 {
   "name": "coc-sql",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "description": "SQL extension for coc.nvim",
   "main": "lib/index.js",
   "author": "Heyward Fann <fannheyward@gmail.com>",
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/node": "^13.13.2",
     "coc.nvim": "^0.0.77",
-    "node-sql-parser": "^1.8.2",
+    "node-sql-parser": "^1.8.3",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "sql-formatter": "^2.3.3",
