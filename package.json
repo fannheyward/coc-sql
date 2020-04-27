@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib",
-    "watch": "tsc --watch",
-		"build": "tsc",
-    "prepare": "npm-run-all clean lib"
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "prepare": "npm-run-all clean build"
   },
   "engines": {
     "coc": "^0.0.70"
