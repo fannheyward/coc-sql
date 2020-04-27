@@ -10,7 +10,6 @@ module.exports = {
   },
   externals: {
     'coc.nvim': 'commonjs coc.nvim',
-    'pg-query-parser': 'commonjs pg-query-parser',
   },
   module: {
     rules: [
