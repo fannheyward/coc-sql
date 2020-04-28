@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "clean": "rimraf lib",
-    "watch": "webpack --watch",
-    "build": "webpack",
+    "watch": "tsc --watch",
+    "build": "tsc",
     "prepare": "npm-run-all clean build"
   },
   "engines": {
@@ -41,7 +41,7 @@
       "properties": {
         "sql.database": {
           "type": "string",
-          "default": "mysql",
+          "default": "guess",
           "enum": [
             "hive",
             "mysql",
@@ -74,5 +74,8 @@
         "title": "Format sql file by sql-formatter"
       }
     ]
+  },
+  "dependencies": {
+    "pg-query-emscripten": "^0.1.0"
   }
 }
