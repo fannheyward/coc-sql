@@ -21,6 +21,7 @@ function safeExecution(cb: (() => string) | Promise<string>, defaultText: string
         return returnValue;
       })
       .catch((err: Error) => {
+        // eslint-disable-next-line no-console
         console.error(fileName, err);
 
         return defaultText;
@@ -32,6 +33,7 @@ function safeExecution(cb: (() => string) | Promise<string>, defaultText: string
 
     return returnValue;
   } catch (err) {
+    // eslint-disable-next-line no-console
     console.error(fileName, err);
 
     return defaultText;
@@ -40,7 +42,7 @@ function safeExecution(cb: (() => string) | Promise<string>, defaultText: string
 
 export function fullDocumentRange(document: TextDocument): Range {
   const lastLineId = document.lineCount - 1;
-  let doc = workspace.getDocument(document.uri);
+  const doc = workspace.getDocument(document.uri);
 
   return Range.create({ character: 0, line: 0 }, { character: doc.getline(lastLineId).length, line: lastLineId });
 }

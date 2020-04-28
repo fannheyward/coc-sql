@@ -1,8 +1,7 @@
 import { DiagnosticCollection, languages, workspace } from 'coc.nvim';
 import { Option, Parser } from 'node-sql-parser';
-import { DiagnosticSeverity, Position, Range, TextDocument } from 'vscode-languageserver-protocol';
 import PgQuery from 'pg-query-emscripten';
-
+import { DiagnosticSeverity, Position, Range, TextDocument } from 'vscode-languageserver-protocol';
 import { getDatabase } from './utils';
 
 export class SQLLintEngine {
@@ -21,7 +20,7 @@ export class SQLLintEngine {
 
     try {
       const database = getDatabase();
-      if (database === "postgresql") {
+      if (database === 'postgresql') {
         // We use pg-query-parser for PostgreSQL
         const result = PgQuery.parse(textDocument.getText());
         if (result.error) {
@@ -47,7 +46,7 @@ export class SQLLintEngine {
           const end = Position.create(err.location.end.line - 1, err.location.end.column);
           const range = Range.create(start.line, start.character, end.line, end.character);
           err.range = range;
-          throw err
+          throw err;
         }
       }
     } catch (err) {
@@ -58,9 +57,7 @@ export class SQLLintEngine {
         source: 'sql',
         relatedInformation: [],
       };
-      this.collection.set(textDocument.uri, [
-        diagnostic,
-      ]);
+      this.collection.set(textDocument.uri, [diagnostic]);
     }
   }
 }
