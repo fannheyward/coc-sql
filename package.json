@@ -23,9 +23,9 @@
     "url": "https://github.com/fannheyward/coc-sql"
   },
   "devDependencies": {
-    "@types/node": "^13.13.5",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
+    "@types/node": "^14.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "coc.nvim": "^0.0.77",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
@@ -36,7 +36,7 @@
     "rimraf": "^3.0.2",
     "sql-formatter": "^2.3.3",
     "ts-loader": "^7.0.4",
-    "typescript": "^3.5.3",
+    "typescript": "^3.9.2",
     "vscode-languageserver-protocol": "^3.15.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
