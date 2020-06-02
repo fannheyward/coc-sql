@@ -7,3 +7,5 @@ yarn-error.log
 *.map
 .tags
 .DS_Store
+.github
+.eslintrc.js
