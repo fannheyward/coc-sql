@@ -2508,10 +2508,10 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
-node-sql-parser@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-2.0.5.tgz#273f64fc1f6a46229daf72fd1cd6cc0a039eb5ca"
-  integrity sha512-hMegytfsN4BUUbtMHa8Y60O99YpCUhbGlZcCdrIhJU0CJxlU7bgyi1ghIaa3SG7r3rjhQ6cvIdsgRcz+QH9dag==
+node-sql-parser@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-2.0.6.tgz#4c8e03124c401eb1a2b299b18ae973977f9e67a9"
+  integrity sha512-FBqVBeuwRmuoyk6yE+VTvJyS09Q6mr7IAUZcxrlkaWCqR8mq/2HtIORWKR0lfIPtb6VzucL5LrHVNX8XgYK3Pw==
   dependencies:
     big-integer "^1.6.48"
 
