@@ -2464,9 +2464,9 @@ node-libs-browser@^2.2.1:
     vm-browserify "^1.0.1"
 
 node-sql-parser@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-2.0.6.tgz#4c8e03124c401eb1a2b299b18ae973977f9e67a9"
-  integrity sha512-FBqVBeuwRmuoyk6yE+VTvJyS09Q6mr7IAUZcxrlkaWCqR8mq/2HtIORWKR0lfIPtb6VzucL5LrHVNX8XgYK3Pw==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-2.2.0.tgz#5ccd53ae9c6263d990b71f42518328a05ace4b48"
+  integrity sha512-9ZX4ZC9dwCB7lFM2x+TaAxRqT5xTdyyVHSw0wmnbV67T3/OOD2/T2jgpb2GPM9GWhnJo2if+nP4lt8zFMeNjxA==
   dependencies:
     big-integer "^1.6.48"
 
