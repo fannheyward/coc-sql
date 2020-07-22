@@ -45,10 +45,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha512-8+KAKzEvSUdeo+kmqnKrqgeE+LcA0tjYWFY7RPProVYwnqDjukzO+3b6dLD56rYX5TdWejnEOLJYOIeh4CXKuA==
 
-"@types/node@^14.0.13":
-  version "14.0.23"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.23.tgz#676fa0883450ed9da0bb24156213636290892806"
-  integrity sha512-Z4U8yDAl5TFkmYsZdFPdjeMa57NOvnaf1tljHzhouaPEp7LCj2JKkejpI1ODviIAQuW4CcQmxkQ77rnLsOOoKw==
+"@types/node@^14.0.24":
+  version "14.0.24"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.24.tgz#b0f86f58564fa02a28b68f8b55d4cdec42e3b9d6"
+  integrity sha512-btt/oNOiDWcSuI721MdL8VQGnjsKjlTMdrKyTcLCKeQp/n4AAMFJ961wMbp+09y8WuGPClDEv07RIItdXKIXAA==
 
 "@typescript-eslint/eslint-plugin@^3.2.0":
   version "3.7.0"
@@ -2366,10 +2366,10 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
-node-sql-parser@^2.0.6:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-2.3.0.tgz#b35e76921c5e41e0de4124e111b96c50b7c718bc"
-  integrity sha512-Mp5eBTPHw8z2j+LXgZr+pwcnXNviSH2Shk3tu2quOxNhyOGJKxjHwTLnCCqpvt9+7aFc37KEWNssHz/YNzr8jg==
+node-sql-parser@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.0.1.tgz#082ccbff99c854181d25f7edabc7f0e48c6f43ab"
+  integrity sha512-woKoDIbUayicK6y1wdGmjbbTFNUzeeNDkmwzUTHm8zw6ieYSmZJtTic5ANlqB8tRv+bZEhyc7wDCD18pfQs7Yg==
   dependencies:
     big-integer "^1.6.48"
 

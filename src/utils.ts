@@ -10,7 +10,7 @@ export const log = (something: any) => {
 
 const defaultDatabase = 'mysql';
 
-const supportedDatabases = ['hive', 'mysql', 'mariadb', 'postgresql', 'transactsql'];
+const supportedDatabases = ['db2', 'bigquery', 'hive', 'mysql', 'mariadb', 'postgresql', 'transactsql'];
 
 // Guess database from environment variable DATABASE_URL
 function guessDatabase(): string {
