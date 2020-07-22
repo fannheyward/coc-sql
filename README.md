@@ -17,8 +17,9 @@ SQL extension for coc.nvim
 
 ## Configuration
 
-- `sql.lintOnSave`: Lint sql file on save, default `true`
+- `sql.lintOnOpen`: Lint sql file on opening, default `true`
 - `sql.lintOnChange`: Lint sql file on change, default `true`
+- `sql.lintOnSave`: Lint sql file on save, default `true`
 - `sql.database`: Choose the database syntax flavor, default to `guess`
 
 ## Usage
