@@ -22,6 +22,9 @@
     "type": "git",
     "url": "https://github.com/fannheyward/coc-sql"
   },
+  "activationEvents": [
+    "onLanguage:sql"
+  ],
   "devDependencies": {
     "@types/node": "^14.0.24",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
@@ -36,7 +39,7 @@
     "rimraf": "^3.0.2",
     "sql-formatter": "^2.3.3",
     "ts-loader": "^8.0.0",
-    "typescript": "^3.9.5",
+    "typescript": "^4.0.2",
     "vscode-languageserver-protocol": "^3.15.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
@@ -44,7 +47,7 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "TexLab configuration",
+      "title": "coc-sql configuration",
       "properties": {
         "sql.database": {
           "type": "string",
