@@ -1,4 +1,4 @@
-import { commands, events, ExtensionContext, languages, workspace } from 'coc.nvim';
+import { commands, ExtensionContext, languages, workspace } from 'coc.nvim';
 import { Disposable, DocumentSelector, TextEdit } from 'vscode-languageserver-protocol';
 import SQLFormattingEditProvider, { format, fullDocumentRange } from './SQLFormattingEditProvider';
 import { SQLLintEngine } from './SQLLintEngine';
@@ -75,14 +75,6 @@ export async function activate(context: ExtensionContext): Promise<void> {
   const onOpen = config.get('lintOnOpen') as boolean;
   if (onOpen) {
     workspace.documents.map(async (doc) => {
-      await engine.lint(doc.textDocument);
-    });
-
-    events.on('BufEnter', async (bufnr) => {
-      const doc = workspace.getDocument(bufnr);
-      if (!doc) {
-        return;
-      }
       await engine.lint(doc.textDocument);
     });
 
