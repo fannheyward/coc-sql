@@ -1,7 +1,6 @@
-import { DiagnosticCollection, languages, workspace } from 'coc.nvim';
+import { DiagnosticCollection, DiagnosticSeverity, languages, Position, Range, TextDocument, workspace } from 'coc.nvim';
 import { Option, Parser } from 'node-sql-parser';
 import PgQuery from 'pg-query-emscripten';
-import { DiagnosticSeverity, Position, Range, TextDocument } from 'vscode-languageserver-protocol';
 import { getDatabase } from './utils';
 
 export class SQLLintEngine {

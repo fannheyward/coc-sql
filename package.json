@@ -12,7 +12,7 @@
     "prepare": "npm-run-all clean build"
   },
   "engines": {
-    "coc": "^0.0.70"
+    "coc": "^0.0.80"
   },
   "keywords": [
     "coc.nvim"
@@ -26,9 +26,10 @@
   ],
   "devDependencies": {
     "@types/node": "^14.6.3",
+    "@types/sql-formatter": "^2.3.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
-    "coc.nvim": "^0.0.79",
+    "coc.nvim": "^0.0.80",
     "esbuild": "^0.8.34",
     "eslint": "^7.8.1",
     "eslint-config-prettier": "^7.0.0",
@@ -38,8 +39,7 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "sql-formatter": "^2.3.3",
-    "typescript": "^4.0.2",
-    "vscode-languageserver-protocol": "^3.15.3"
+    "typescript": "^4.0.2"
   },
   "contributes": {
     "configuration": {

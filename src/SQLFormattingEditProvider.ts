@@ -1,6 +1,5 @@
-import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Uri, workspace } from 'coc.nvim';
+import { CancellationToken, DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, FormattingOptions, Range, TextDocument, TextEdit, Uri, window, workspace } from 'coc.nvim';
 import sqlFormatter from 'sql-formatter';
-import { CancellationToken, FormattingOptions, Range, TextDocument, TextEdit } from 'vscode-languageserver-protocol';
 
 export async function format(document: TextDocument, range?: Range): Promise<string> {
   const fileName = Uri.parse(document.uri).fsPath;
@@ -69,7 +68,7 @@ class SQLFormattingEditProvider implements DocumentFormattingEditProvider, Docum
       range = fullDocumentRange(document);
     }
 
-    workspace.showMessage(`Formatted by sql.Format`);
+    window.showMessage(`Formatted by sql.Format`);
     return [TextEdit.replace(range, code)];
   }
 }

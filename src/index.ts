@@ -1,5 +1,4 @@
-import { commands, ExtensionContext, languages, workspace } from 'coc.nvim';
-import { Disposable, DocumentSelector, TextEdit } from 'vscode-languageserver-protocol';
+import { commands, Disposable, DocumentSelector, ExtensionContext, languages, TextEdit, workspace } from 'coc.nvim';
 import SQLFormattingEditProvider, { format, fullDocumentRange } from './SQLFormattingEditProvider';
 import { SQLLintEngine } from './SQLLintEngine';
 
