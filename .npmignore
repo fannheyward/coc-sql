@@ -2,6 +2,7 @@ src
 node_modules
 tsconfig.json
 webpack.config.js
+esbuild.js
 yarn.lock
 yarn-error.log
 *.map
