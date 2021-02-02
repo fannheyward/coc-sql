@@ -2,11 +2,12 @@ import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Ra
 import { format } from 'sql-formatter';
 
 export async function doFormat(document: TextDocument, range?: Range): Promise<string> {
+  const options = workspace.getConfiguration('sql').get('formatOptions', {});
   const fileName = Uri.parse(document.uri).fsPath;
   const text = document.getText(range);
   return safeExecution(
     () => {
-      return format(text);
+      return format(text, options);
     },
     text,
     fileName

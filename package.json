@@ -46,6 +46,11 @@
       "type": "object",
       "title": "coc-sql configuration",
       "properties": {
+        "sql.formatOptions": {
+          "type": "object",
+          "default": {},
+          "description": "Format options passed to sql-formatter, check https://github.com/zeroturnaround/sql-formatter"
+        },
         "sql.database": {
           "type": "string",
           "default": "guess",
