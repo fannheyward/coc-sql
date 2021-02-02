@@ -21,6 +21,7 @@ SQL extension for coc.nvim
 - `sql.lintOnChange`: Lint sql file on change, default `true`
 - `sql.lintOnSave`: Lint sql file on save, default `true`
 - `sql.database`: Choose the database syntax flavor, default to `guess`
+- `sql.formatOptions`: Format options passed to `sql-formatter`, checkout <https://github.com/zeroturnaround/sql-formatter>
 
 ## Usage
 
