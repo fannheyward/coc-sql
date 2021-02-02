@@ -1,5 +1,5 @@
 import { commands, Disposable, DocumentSelector, ExtensionContext, languages, TextEdit, workspace } from 'coc.nvim';
-import SQLFormattingEditProvider, { format, fullDocumentRange } from './SQLFormattingEditProvider';
+import SQLFormattingEditProvider, { doFormat, fullDocumentRange } from './SQLFormattingEditProvider';
 import { SQLLintEngine } from './SQLLintEngine';
 
 interface Selectors {
@@ -63,7 +63,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
     commands.registerCommand('sql.Format', async () => {
       const doc = await workspace.document;
 
-      const code = await format(doc.textDocument, undefined);
+      const code = await doFormat(doc.textDocument, undefined);
       const edits = [TextEdit.replace(fullDocumentRange(doc.textDocument), code)];
       if (edits) {
         await doc.applyEdits(edits);

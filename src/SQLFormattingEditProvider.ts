@@ -1,12 +1,12 @@
-import { CancellationToken, DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, FormattingOptions, Range, TextDocument, TextEdit, Uri, window, workspace } from 'coc.nvim';
-import sqlFormatter from 'sql-formatter';
+import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Range, TextDocument, TextEdit, Uri, window, workspace } from 'coc.nvim';
+import { format } from 'sql-formatter';
 
-export async function format(document: TextDocument, range?: Range): Promise<string> {
+export async function doFormat(document: TextDocument, range?: Range): Promise<string> {
   const fileName = Uri.parse(document.uri).fsPath;
   const text = document.getText(range);
   return safeExecution(
     () => {
-      return sqlFormatter.format(text);
+      return format(text);
     },
     text,
     fileName
@@ -15,26 +15,20 @@ export async function format(document: TextDocument, range?: Range): Promise<str
 
 function safeExecution(cb: (() => string) | Promise<string>, defaultText: string, fileName: string): string | Promise<string> {
   if (cb instanceof Promise) {
-    return cb
-      .then((returnValue) => {
-        return returnValue;
-      })
-      .catch((err: Error) => {
-        // eslint-disable-next-line no-console
-        console.error(fileName, err);
-
-        return defaultText;
-      });
+    return cb.then((returnValue) => {
+      return returnValue;
+    }).catch((err: Error) => {
+      // eslint-disable-next-line no-console
+      console.error(fileName, err);
+      return defaultText;
+    });
   }
 
   try {
-    const returnValue = cb();
-
-    return returnValue;
+    return cb();
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error(fileName, err);
-
     return defaultText;
   }
 }
@@ -49,21 +43,19 @@ export function fullDocumentRange(document: TextDocument): Range {
 class SQLFormattingEditProvider implements DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider {
   constructor() {}
 
-  public provideDocumentFormattingEdits(document: TextDocument, _options: FormattingOptions, _token: CancellationToken): Promise<TextEdit[]> {
+  public provideDocumentFormattingEdits(document: TextDocument): Promise<TextEdit[]> {
     return this._provideEdits(document, undefined);
   }
 
   public provideDocumentRangeFormattingEdits(
     document: TextDocument,
     range: Range,
-    _options: FormattingOptions,
-    _token: CancellationToken
   ): Promise<TextEdit[]> {
     return this._provideEdits(document, range);
   }
 
   private async _provideEdits(document: TextDocument, range?: Range): Promise<TextEdit[]> {
-    const code = await format(document, range);
+    const code = await doFormat(document, range);
     if (!range) {
       range = fullDocumentRange(document);
     }
