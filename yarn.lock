@@ -1178,9 +1178,9 @@ sprintf-js@~1.0.2:
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
 
 sql-formatter@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-4.0.1.tgz#79a08f131f8cb181c3766212a7af98276dd4d890"
-  integrity sha512-XwkGiYh1bksNiWuCwRQ4qprrwFFXEGX61PRL08y9Ecl6K1TS0R2AJRJ/fZ+ePSojNo3DlPkfy+97sTLGFEETrA==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-4.0.2.tgz#2b359e5a4c611498d327b9659da7329d71724607"
+  integrity sha512-R6u9GJRiXZLr/lDo8p56L+OyyN2QFJPCDnsyEOsbdIpsnDKL8gubYFo7lNR7Zx7hfdWT80SfkoVS0CMaF/DE2w==
   dependencies:
     argparse "^2.0.1"
 
