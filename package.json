@@ -24,8 +24,8 @@
     "onLanguage:sql"
   ],
   "devDependencies": {
+    "@sqltools/formatter": "^1.2.3",
     "@types/node": "^15.0.0",
-    "@types/sql-formatter": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "coc.nvim": "^0.0.80",
@@ -36,7 +36,6 @@
     "node-sql-parser": "^3.5.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "sql-formatter": "^4.0.1",
     "typescript": "^4.0.2"
   },
   "contributes": {
@@ -47,7 +46,7 @@
         "sql.formatOptions": {
           "type": "object",
           "default": {},
-          "description": "Format options passed to sql-formatter, check https://github.com/zeroturnaround/sql-formatter"
+          "description": "Format options passed to @sqltools/formatter, check https://www.npmjs.com/package/@sqltools/formatter#options"
         },
         "sql.database": {
           "type": "string",
@@ -83,7 +82,7 @@
     "commands": [
       {
         "command": "sql.Format",
-        "title": "Format sql file by sql-formatter"
+        "title": "Format sql file by @sqltools/formatter"
       }
     ]
   },

@@ -4,7 +4,7 @@ SQL extension for coc.nvim
 
 ## Features
 
-- Format by [sql-formatter](https://github.com/zeroturnaround/sql-formatter)
+- Format by [@sqltools/formatter](https://www.npmjs.com/package/@sqltools/formatter)
 - Lint by [node-sql-parser](https://github.com/taozhi8833998/node-sql-parser)
 
 ## Install
@@ -21,7 +21,7 @@ SQL extension for coc.nvim
 - `sql.lintOnChange`: Lint sql file on change, default `true`
 - `sql.lintOnSave`: Lint sql file on save, default `true`
 - `sql.database`: Choose the database syntax flavor, default to `guess`
-- `sql.formatOptions`: Format options passed to `sql-formatter`, checkout <https://github.com/zeroturnaround/sql-formatter>
+- `sql.formatOptions`: Format options passed to `@sqltools/formatter`, checkout <https://www.npmjs.com/package/@sqltools/formatter#options>
 
 ## Usage
 
