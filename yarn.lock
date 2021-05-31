@@ -842,9 +842,9 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 node-sql-parser@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.5.0.tgz#165307b994ae073bd6b0f96af5da6c0557f9d98b"
-  integrity sha512-i1CEiST35s089TxRDGPsXrsgYvMPeYM4qslyODI2kYgUtqiUX0JJTG8bvwBMi3oXE2lKrCeff2zhYHkLxr5xHg==
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.6.0.tgz#309e99f726f3da237c203a412a28973bc0e5455f"
+  integrity sha512-ZibyiHq2ZqV1InwLtUCKJfRQbUEE4PBG9qh9v5pIC22+5z22B8A3kdHW4kqcMqS3Gure1SeSG5YA0AHs2/nJ7Q==
   dependencies:
     big-integer "^1.6.48"
 
