@@ -83,10 +83,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
   integrity sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==
 
-"@types/node@^16.6.1":
-  version "16.6.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.6.1.tgz#aee62c7b966f55fc66c7b6dfa1d58db2a616da61"
-  integrity sha512-Sr7BhXEAer9xyGuCN3Ek9eg9xPviCF2gfu9kTfuU2HkTVAMYSDeX40fvpmo72n5nansg3nsBjuQBrsS28r+NUw==
+"@types/node@^16.6.2":
+  version "16.6.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.6.2.tgz#331b7b9f8621c638284787c5559423822fdffc50"
+  integrity sha512-LSw8TZt12ZudbpHc6EkIyDM3nHVWKYrAvGy6EAJfNfjusbwnThqjqxUKKRwuV3iWYeW/LYMzNgaq3MaLffQ2xA==
 
 "@types/sql-formatter@^4.0.1":
   version "4.0.1"
@@ -376,10 +376,10 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
-esbuild@^0.12.20:
-  version "0.12.20"
-  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.20.tgz#4d3c9d83c99a4031e027b42a4c398c23b6827cb0"
-  integrity sha512-u7+0qTo9Z64MD9PhooEngCmzyEYJ6ovFhPp8PLNh3UasR5Ihjv6HWVXqm8uHmasdQlpsAf0IsY4U0YVUfCpt4Q==
+esbuild@^0.12.21:
+  version "0.12.21"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.21.tgz#7ff32a9ac73ce4310f9cb61ea4c3da9756570d46"
+  integrity sha512-7hyXbU3g94aREufI/5nls7Xcc+RGQeZWZApm6hoBaFvt2BPtpT4TjFMQ9Tb1jU8XyBGz00ShmiyflCogphMHFQ==
 
 escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -804,10 +804,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-node-sql-parser@^3.6.3:
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.6.3.tgz#99404d4d972a2142e71a1398e1aa6009efe5c328"
-  integrity sha512-oo/tckpIxh3JjRs3P4kB/72OA+33Sq7hAwpXKrYkXMToQdpi94a5EXL2FgwGxpZ9IN3R+m3SbrnPS3LKPBWM5Q==
+node-sql-parser@^3.6.4:
+  version "3.6.4"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.6.4.tgz#9d4a35701b0ea47af24296335315756c7e184e9c"
+  integrity sha512-3Tc3RCg4vgHULmfr+ZsYqFRrCqa3mKMkqwZgtN6BqTQjNCNM08p/woH6LGfF5G2YIK6W99VLpzMwa8/wQGVq+A==
   dependencies:
     big-integer "^1.6.48"
 
