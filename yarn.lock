@@ -804,10 +804,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-node-sql-parser@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.6.4.tgz#9d4a35701b0ea47af24296335315756c7e184e9c"
-  integrity sha512-3Tc3RCg4vgHULmfr+ZsYqFRrCqa3mKMkqwZgtN6BqTQjNCNM08p/woH6LGfF5G2YIK6W99VLpzMwa8/wQGVq+A==
+node-sql-parser@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-3.7.0.tgz#ea1ad3860dff0ab31f6edc2c4e13d3fbd10d96ff"
+  integrity sha512-ubVa3UNIeNoebPkGAsAD/r16V4UPJjt2O74bidzvQrj5Py/+4tFJOWmJgGkNf1lOx9pJWoIARGbOBB/l111gCA==
   dependencies:
     big-integer "^1.6.48"
 
