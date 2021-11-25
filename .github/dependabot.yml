@@ -3,15 +3,6 @@ updates:
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: weekly
-    time: "21:00"
-  open-pull-requests-limit: 10
+    interval: "monthly"
   reviewers:
   - fannheyward
-  ignore:
-  - dependency-name: eslint-config-prettier
-    versions:
-    - 8.0.0
-  - dependency-name: sql-formatter
-    versions:
-    - 4.0.1
