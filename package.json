@@ -24,20 +24,20 @@
     "onLanguage:sql"
   ],
   "devDependencies": {
-    "@types/node": "^16.6.2",
+    "@types/node": "^16.11.10",
     "@types/sql-formatter": "^4.0.1",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.29.2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
     "coc.nvim": "^0.0.80",
-    "esbuild": "^0.12.21",
-    "eslint": "^7.8.1",
+    "esbuild": "^0.13.15",
+    "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "node-sql-parser": "^4.0.0",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "sql-formatter": "^4.0.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.5.2"
   },
   "contributes": {
     "configuration": {
