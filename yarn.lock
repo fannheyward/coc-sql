@@ -67,13 +67,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.32.tgz#51d59d7a90ef2d0ae961791e0900cad2393a0149"
   integrity sha512-eAIcfAvhf/BkHcf4pkLJ7ECpBAhh9kcxRBpip9cTiO+hf+aJrsxYxBeS6OXvOd9WqNAJmavXVpZvY1rBjNsXmw==
 
-"@types/sql-formatter@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@types/sql-formatter/-/sql-formatter-4.0.1.tgz#3c15dc3e50335e7909d6c01f1a4fd66da05e82a3"
-  integrity sha512-WLSHjarjiUz4GtQivyaDbagqJNHcFA1XOAvrgXmWLl1OeTCP0RuiFB1PtUIH4ArOqZX1Hk6ANzABWe6nw9nKpg==
-  dependencies:
-    sql-formatter "*"
-
 "@typescript-eslint/eslint-plugin@^5.23.0":
   version "5.23.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-5.23.0.tgz#bc4cbcf91fbbcc2e47e534774781b82ae25cc3d8"
@@ -936,10 +929,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sql-formatter@*, sql-formatter@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-4.0.2.tgz#2b359e5a4c611498d327b9659da7329d71724607"
-  integrity sha512-R6u9GJRiXZLr/lDo8p56L+OyyN2QFJPCDnsyEOsbdIpsnDKL8gubYFo7lNR7Zx7hfdWT80SfkoVS0CMaF/DE2w==
+sql-formatter@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-6.0.0.tgz#bbbc36ee41e9958ea275edc7ab9dd18c4aef5efa"
+  integrity sha512-ZEo2w6BsVvxGBHGMkIR5QjtsiqTeft6uVx2AasoVAL0CWpPLEDYNttyWuQceAfdm66yJrp/uCI1xvguWVlTAFg==
   dependencies:
     argparse "^2.0.1"
 
