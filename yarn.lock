@@ -929,10 +929,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sql-formatter@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-6.0.2.tgz#c0fd082d813a8eadb7dca9d9046505a56385a7f7"
-  integrity sha512-AGjzOiEKrptK0mts3ZXyXQIiUi1w44HrMQ2n1oZG6HAVlPG0bbJUK2VNAr24yLtRZyFf39L3oQS3KjFl9UcjDA==
+sql-formatter@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-6.1.0.tgz#f448eb94a2031acebf72fe29513faf9a191666a9"
+  integrity sha512-orheHQZIHz/v51eCIJzTUcmTrF+hZGPcparpM3+A0rdBFj0ppGf+Z7LbcdmytyzLXQqgEQGaERdOThe/NAOD3w==
   dependencies:
     argparse "^2.0.1"
 
