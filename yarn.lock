@@ -883,10 +883,10 @@ nearley@^2.20.1:
     railroad-diagrams "^1.0.0"
     randexp "0.4.6"
 
-node-sql-parser@^4.0.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.4.0.tgz#80aadf88e1c30a2e6826bc3121036a29f16f65b1"
-  integrity sha512-c5J7oxQk4XWnNWPaGZ4CS0HFSDJex/QjoCNUuUJ84PX0ehAHFfPPkpjChQ3uySmHKHiwiVKMDFmPsFlq1gSXFQ==
+node-sql-parser@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.5.1.tgz#c35f7e15b4be5c4f09ef3e971a738e0632303ff5"
+  integrity sha512-99/6q5CTRjYNcCPq2waae4yJZ//T0XBjEDCurGK93ViuSgN4txsp1LqGHxQlg0SpOR1xJUNLKSF9UbZibSnE5w==
   dependencies:
     big-integer "^1.6.48"
 
@@ -1051,10 +1051,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sql-formatter@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-10.2.0.tgz#4d07052387d843b2379fe9ba9450edf99dd475f3"
-  integrity sha512-Xt++cp0h+2zXLmNGwUo8gi6Tmgw3zZOmV5AzciYCjzDHtJpF1VDYgM6dNK3PTn1DCXnnQdJWhFayzV5TFm4emQ==
+sql-formatter@^10.7.1:
+  version "10.7.1"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-10.7.1.tgz#420cf21b5b0ba2e83358b3915804ec0af9ced452"
+  integrity sha512-MT+xzoheCmes3Ct6HBHajN7wksgAZ3RNb+kOS8gUsa2Lhvic5z+VeUI4Uq3hXNQVJm7fe0alDjbyEDvvTfnBlw==
   dependencies:
     argparse "^2.0.1"
     nearley "^2.20.1"

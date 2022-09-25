@@ -32,10 +32,10 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "node-sql-parser": "^4.0.0",
+    "node-sql-parser": "^4.5.1",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "sql-formatter": "^10.2.0",
+    "sql-formatter": "^10.7.1",
     "typescript": "^4.6.4"
   },
   "contributes": {
@@ -46,7 +46,7 @@
         "sql.formatOptions": {
           "type": "object",
           "default": {},
-          "description": "Format options passed to sql-formatter, check https://github.com/zeroturnaround/sql-formatter"
+          "description": "Format options passed to sql-formatter, check https://github.com/sql-formatter-org/sql-formatter#configuration-options"
         },
         "sql.database": {
           "type": "string",
