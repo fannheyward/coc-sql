@@ -1082,9 +1082,9 @@ slash@^3.0.0:
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
 sql-formatter@^11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-11.0.0.tgz#ce91e2ed8f39338db29c408b1039f87ffea69e9b"
-  integrity sha512-1mzwR84U2Gb9dl+MOata2Zf11OMthUKDAJbixDUF3gmazXMoezUk6qWPzMAdbiIRePF+seCVZkzOkfdwLIQ1iw==
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-11.0.2.tgz#2fde373c8c1845f8ee9f201d2eccb1fb365cd893"
+  integrity sha512-6QumAdGHEnI5dXEq1d0aBRP876AyA9Wp/UE7wopKNA2Mp9sKGRKVqGgoWHk4dr0J0nceesC85Y0p36qmGoNqhw==
   dependencies:
     argparse "^2.0.1"
     nearley "^2.20.1"
