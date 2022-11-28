@@ -30,9 +30,7 @@
     "coc.nvim": "^0.0.82",
     "esbuild": "^0.15.10",
     "eslint": "^8.15.0",
-    "node-sql-parser": "^4.5.1",
     "rimraf": "^3.0.2",
-    "sql-formatter": "^11.0.0",
     "typescript": "^4.6.4"
   },
   "contributes": {
@@ -84,6 +82,8 @@
     ]
   },
   "dependencies": {
-    "pg-query-emscripten": "^0.1.0"
+    "node-sql-parser": "^4.6.0",
+    "pg-query-emscripten": "^0.1.0",
+    "sql-formatter": "^12.0.3"
   }
 }

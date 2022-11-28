@@ -258,9 +258,9 @@ balanced-match@^1.0.0:
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
 big-integer@^1.6.48:
-  version "1.6.48"
-  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.48.tgz#8fd88bd1632cba4a1c8c3e3d7159f08bb95b4b9e"
-  integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
+  version "1.6.51"
+  resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.51.tgz#0df92a5d9880560d3ff2d5fd20245c889d130686"
+  integrity sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -867,9 +867,9 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 moo@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.1.tgz#7aae7f384b9b09f620b6abf6f74ebbcd1b65dbc4"
-  integrity sha512-I1mnb5xn4fO80BH9BLcF0yLypy2UKl+Cb01Fu0hJRkJjlCRtxZMWkTdAtDd5ZqCOxtCkhmRwyI57vWT+1iZ67w==
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.2.tgz#f9fe82473bc7c184b0d32e2215d3f6e67278733c"
+  integrity sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==
 
 ms@2.1.2:
   version "2.1.2"
@@ -896,10 +896,10 @@ nearley@^2.20.1:
     railroad-diagrams "^1.0.0"
     randexp "0.4.6"
 
-node-sql-parser@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.5.1.tgz#c35f7e15b4be5c4f09ef3e971a738e0632303ff5"
-  integrity sha512-99/6q5CTRjYNcCPq2waae4yJZ//T0XBjEDCurGK93ViuSgN4txsp1LqGHxQlg0SpOR1xJUNLKSF9UbZibSnE5w==
+node-sql-parser@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.0.tgz#bd77a39d4b05433c596f0c8ad27018e17b1a60a9"
+  integrity sha512-ZspOivOYeEhjXDAkA2QFmkf00+pDSBp8cKJp+1wz8fjlW2IAbcCIfHvMLcahoeLd6RF09toAjh8oICZCW4KCug==
   dependencies:
     big-integer "^1.6.48"
 
@@ -1052,10 +1052,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sql-formatter@^11.0.0:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-11.0.2.tgz#2fde373c8c1845f8ee9f201d2eccb1fb365cd893"
-  integrity sha512-6QumAdGHEnI5dXEq1d0aBRP876AyA9Wp/UE7wopKNA2Mp9sKGRKVqGgoWHk4dr0J0nceesC85Y0p36qmGoNqhw==
+sql-formatter@^12.0.3:
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-12.0.3.tgz#ff8eada3a58f2ec120f5491fc80e57e0d8df4b40"
+  integrity sha512-Q4ABErLPem1hW/IAy9XOkGIdXgeM+SfUv0ngRo6ef/Z7t4juz/buX8tkBRvEjthAuO9AXVbEKKnBetFxGE+/JQ==
   dependencies:
     argparse "^2.0.1"
     nearley "^2.20.1"
