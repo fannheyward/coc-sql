@@ -28,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "coc.nvim": "^0.0.82",
-    "esbuild": "^0.15.10",
+    "esbuild": "^0.16.12",
     "eslint": "^8.15.0",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4"
