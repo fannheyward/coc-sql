@@ -863,10 +863,10 @@ nearley@^2.20.1:
     railroad-diagrams "^1.0.0"
     randexp "0.4.6"
 
-node-sql-parser@^4.6.0:
-  version "4.6.3"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.3.tgz#ad6e3b152dc63493859d045b6efc64571e9ceff4"
-  integrity sha512-9fIFNO4bNI/3k8cENfdcC5PP2RVV+mIs5DjqnoNCq9HGJcQqi8iT9j/0oOiqBhK/33nSBj2h6gpWyODeYITTHA==
+node-sql-parser@^4.6.4:
+  version "4.6.4"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.4.tgz#35b00401ca23018798b69d3cec0917aa87e5a84d"
+  integrity sha512-OPzbsiN5VX37/HM5BgGxcoDt1ggvFUc6gdzyQzoPjk8orTOHBlgHuDUugP5oRU+CcOw8GniilvV3pt5FBxp47A==
   dependencies:
     big-integer "^1.6.48"
 
@@ -1019,10 +1019,10 @@ slash@^3.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-sql-formatter@^12.0.3:
-  version "12.0.3"
-  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-12.0.3.tgz#ff8eada3a58f2ec120f5491fc80e57e0d8df4b40"
-  integrity sha512-Q4ABErLPem1hW/IAy9XOkGIdXgeM+SfUv0ngRo6ef/Z7t4juz/buX8tkBRvEjthAuO9AXVbEKKnBetFxGE+/JQ==
+sql-formatter@^12.1.0:
+  version "12.1.0"
+  resolved "https://registry.yarnpkg.com/sql-formatter/-/sql-formatter-12.1.0.tgz#465df48a38cbd44291e40befe3963553e1a9eb0c"
+  integrity sha512-XwbFwdes2SuETEj/a0WY2MjweFFzgn5phDum4WOdWjk+aay84xXPUl9BzevB89PLykx+4d9GRdXRaiY1VHzytg==
   dependencies:
     argparse "^2.0.1"
     nearley "^2.20.1"
