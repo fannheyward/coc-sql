@@ -904,9 +904,9 @@ nearley@^2.20.1:
     randexp "0.4.6"
 
 node-sql-parser@^4.6.4:
-  version "4.6.4"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.4.tgz#35b00401ca23018798b69d3cec0917aa87e5a84d"
-  integrity sha512-OPzbsiN5VX37/HM5BgGxcoDt1ggvFUc6gdzyQzoPjk8orTOHBlgHuDUugP5oRU+CcOw8GniilvV3pt5FBxp47A==
+  version "4.6.5"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.5.tgz#aeab1e2d975db1eadbceb7e44ca5a46990678a99"
+  integrity sha512-gX+zTvmUjJZolQEQ6Am3OU3PgBIOptpaAscW93eNM2rkKySB9fdEC6+2Sn7oUmnnZL/oWLzEVZQG4uTN6zRUXg==
   dependencies:
     big-integer "^1.6.48"
 
