@@ -976,9 +976,9 @@ nearley@^2.20.1:
     randexp "0.4.6"
 
 node-sql-parser@^4.6.4:
-  version "4.6.6"
-  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.6.6.tgz#910fcd4ba0132d9a5a8c312637313acc2b43b24a"
-  integrity sha512-zpash5xnRY6+0C9HFru32iRJV1LTkwtrVpO90i385tYVF6efyXK/B3Nsq/15Fuv2utxrqHNjKtL55OHb8sl+eQ==
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/node-sql-parser/-/node-sql-parser-4.7.0.tgz#1c446fdeabac08fc6df1df8e8c15fe1fb3af8304"
+  integrity sha512-6pKgpQ15gwzDdIZVSDYH/5rVOOEWXzIrVOcq7FLCtoo+AVXTFIDmJjgRZOhTW+mDjj9trSHELXv+2AOK4C2dlQ==
   dependencies:
     big-integer "^1.6.48"
 
@@ -1155,6 +1155,7 @@ sql-formatter@^12.1.0:
     nearley "^2.20.1"
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
