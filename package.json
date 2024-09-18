@@ -31,7 +31,7 @@
     "esbuild": "^0.23.1",
     "eslint": "^8.15.0",
     "rimraf": "^5.0.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.6.2"
   },
   "contributes": {
     "configuration": {
@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "node-sql-parser": "^5.3.2",
-    "pg-query-emscripten": "^0.1.0",
-    "sql-formatter": "^15.4.1"
+    "pg-query-emscripten": "^5.1.0",
+    "sql-formatter": "^15.4.2"
   }
 }
