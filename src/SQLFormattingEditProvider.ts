@@ -1,8 +1,11 @@
-import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, Range, TextDocument, TextEdit, Uri, window, workspace } from 'coc.nvim';
+import { DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider, DocumentUri, Range, TextDocument, TextEdit, Uri, window, workspace } from 'coc.nvim';
+import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
 import { format } from 'sql-formatter';
 
 export async function doFormat(document: TextDocument, range?: Range): Promise<string> {
-  const options = workspace.getConfiguration('sql').get('formatOptions', {});
+  const options = await getConfiguration(document.uri);
   const fileName = Uri.parse(document.uri).fsPath;
   const text = document.getText(range);
   return safeExecution(
@@ -12,6 +15,25 @@ export async function doFormat(document: TextDocument, range?: Range): Promise<s
     text,
     fileName
   );
+}
+
+async function getConfiguration(uri: DocumentUri): Promise<Object> {
+  let previousPath = Uri.parse(uri).fsPath;
+  let currentPath = path.dirname(previousPath);
+  while ( previousPath !== currentPath && ! fs.existsSync(path.join(currentPath,'.sql-formatter.json')) ) {
+    console.debug(currentPath);
+    previousPath = currentPath;
+    currentPath = path.resolve(previousPath,'..');
+  }
+  const configPath = path.join(currentPath,'.sql-formatter.json');
+
+  try {
+    return JSON.parse(await promisify(fs.readFile)(configPath, { encoding: 'utf-8' }));
+  } catch (err) {
+    console.debug(err);
+    return workspace.getConfiguration('sql').get('formatOptions', {});
+  }
+
 }
 
 function safeExecution(cb: (() => string) | Promise<string>, defaultText: string, fileName: string): string | Promise<string> {
