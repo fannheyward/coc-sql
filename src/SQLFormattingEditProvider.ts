@@ -21,7 +21,6 @@ async function getConfiguration(uri: DocumentUri): Promise<Object> {
   let previousPath = Uri.parse(uri).fsPath;
   let currentPath = path.dirname(previousPath);
   while ( previousPath !== currentPath && ! fs.existsSync(path.join(currentPath,'.sql-formatter.json')) ) {
-    console.debug(currentPath);
     previousPath = currentPath;
     currentPath = path.resolve(previousPath,'..');
   }
@@ -30,7 +29,6 @@ async function getConfiguration(uri: DocumentUri): Promise<Object> {
   try {
     return JSON.parse(await promisify(fs.readFile)(configPath, { encoding: 'utf-8' }));
   } catch (err) {
-    console.debug(err);
     return workspace.getConfiguration('sql').get('formatOptions', {});
   }
 
