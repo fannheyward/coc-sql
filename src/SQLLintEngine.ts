@@ -1,10 +1,11 @@
 import { DiagnosticCollection, DiagnosticSeverity, languages, Position, Range, TextDocument, workspace } from 'coc.nvim';
 import { Option, Parser } from 'node-sql-parser';
-import PgQuery from 'pg-query-emscripten';
+import Module from 'pg-query-emscripten';
 import { getDatabase } from './utils';
 
 export class SQLLintEngine {
   private collection: DiagnosticCollection;
+  private pgQuery;
 
   constructor() {
     this.collection = languages.createDiagnosticCollection('sql');
@@ -20,8 +21,11 @@ export class SQLLintEngine {
     try {
       const database = getDatabase();
       if (database === 'postgresql') {
+        if (this.pgQuery === undefined){
+          this.pgQuery = await new Module();
+        }
         // We use pg-query-parser for PostgreSQL
-        const result = PgQuery.parse(textDocument.getText());
+        const result = this.pgQuery.parse(textDocument.getText());
         if (result.error) {
           const { error } = result;
           const cursorPosition = error.cursorpos;
