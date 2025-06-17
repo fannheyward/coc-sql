@@ -5,9 +5,5 @@ updates:
   directory: "/"
   schedule:
     interval: "monthly"
-  groups:
-    dev-dependencies-ts-eslint:
-      patterns:
-      - "@typescript-eslint/*"
   reviewers:
   - fannheyward

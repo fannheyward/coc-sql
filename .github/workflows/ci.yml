@@ -29,6 +29,3 @@ jobs:
       - name: npm install
         run: |
           npm ci
-      - name: npm lint
-        run: |
-          npm run lint

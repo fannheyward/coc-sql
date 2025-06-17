@@ -6,7 +6,6 @@
   "author": "Heyward Fann <fannheyward@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src --ext ts",
     "build": "node esbuild.js",
     "prepare": "node esbuild.js"
   },
@@ -25,11 +24,8 @@
   ],
   "devDependencies": {
     "@types/node": "^16.18.48",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.1.0",
     "coc.nvim": "^0.0.83-next.18",
     "esbuild": "^0.25.4",
-    "eslint": "^8.15.0",
     "rimraf": "^5.0.0",
     "typescript": "^5.8.3"
   },
