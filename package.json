@@ -23,7 +23,7 @@
     "onLanguage:sql"
   ],
   "devDependencies": {
-    "@types/node": "^16.18.48",
+    "@types/node": "^24.1.0",
     "coc.nvim": "^0.0.83-next.18",
     "esbuild": "^0.25.4",
     "rimraf": "^5.0.0",
