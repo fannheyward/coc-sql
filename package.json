@@ -25,9 +25,9 @@
   "devDependencies": {
     "@types/node": "^16.18.48",
     "coc.nvim": "^0.0.83-next.18",
-    "esbuild": "^0.25.4",
+    "esbuild": "^0.25.8",
     "rimraf": "^5.0.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   },
   "contributes": {
     "configuration": {
@@ -78,8 +78,8 @@
     ]
   },
   "dependencies": {
-    "node-sql-parser": "^5.3.9",
+    "node-sql-parser": "^5.3.11",
     "pg-query-emscripten": "^5.1.0",
-    "sql-formatter": "^15.6.1"
+    "sql-formatter": "^15.6.6"
   }
 }
