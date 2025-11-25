@@ -43,12 +43,17 @@
           "type": "string",
           "default": "guess",
           "enum": [
+            "athena",
+            "bigquery",
             "db2",
+            "flinksql",
             "hive",
             "mysql",
             "mariadb",
-            "bigquery",
             "postgresql",
+            "redshift",
+            "snowflake",
+            "sqlite",
             "transactsql"
           ],
           "description": "Define the database to lint"
@@ -79,7 +84,6 @@
   },
   "dependencies": {
     "node-sql-parser": "^5.3.11",
-    "pg-query-emscripten": "^5.1.0",
     "sql-formatter": "^15.6.6"
   }
 }

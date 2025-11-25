@@ -20,11 +20,11 @@ export async function doFormat(document: TextDocument, range?: Range): Promise<s
 async function getConfiguration(uri: DocumentUri): Promise<Object> {
   let previousPath = Uri.parse(uri).fsPath;
   let currentPath = path.dirname(previousPath);
-  while ( previousPath !== currentPath && ! fs.existsSync(path.join(currentPath,'.sql-formatter.json')) ) {
+  while (previousPath !== currentPath && !fs.existsSync(path.join(currentPath, '.sql-formatter.json'))) {
     previousPath = currentPath;
-    currentPath = path.resolve(previousPath,'..');
+    currentPath = path.resolve(previousPath, '..');
   }
-  const configPath = path.join(currentPath,'.sql-formatter.json');
+  const configPath = path.join(currentPath, '.sql-formatter.json');
 
   try {
     return JSON.parse(await promisify(fs.readFile)(configPath, { encoding: 'utf-8' }));
@@ -58,7 +58,7 @@ export function fullDocumentRange(document: TextDocument): Range {
   const lastLineId = document.lineCount - 1;
   const doc = workspace.getDocument(document.uri);
 
-  return Range.create({ character: 0, line: 0 }, { character: doc.getline(lastLineId).length, line: lastLineId });
+  return Range.create({ character: 0, line: 0 }, { character: doc!.getline(lastLineId).length, line: lastLineId });
 }
 
 class SQLFormattingEditProvider implements DocumentFormattingEditProvider, DocumentRangeFormattingEditProvider {
@@ -81,7 +81,7 @@ class SQLFormattingEditProvider implements DocumentFormattingEditProvider, Docum
       range = fullDocumentRange(document);
     }
 
-    window.showMessage(`Formatted by sql.Format`);
+    window.showInformationMessage(`Formatted by sql.Format`);
     return [TextEdit.replace(range, code)];
   }
 }

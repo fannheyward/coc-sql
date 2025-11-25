@@ -6,9 +6,9 @@ async function start() {
     minify: process.env.NODE_ENV === 'production',
     sourcemap: process.env.NODE_ENV === 'development',
     mainFields: ['module', 'main'],
-    external: ['coc.nvim'],
+    external: ['coc.nvim', 'node-sql-parser', 'sql-formatter'],
     platform: 'node',
-    target: 'node10.12',
+    target: 'node16.18',
     outfile: 'lib/index.js',
   });
 }
