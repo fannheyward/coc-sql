@@ -83,7 +83,7 @@
     ]
   },
   "dependencies": {
-    "node-sql-parser": "^5.3.11",
-    "sql-formatter": "^15.6.6"
+    "node-sql-parser": "^5.3.13",
+    "sql-formatter": "^15.6.10"
   }
 }
